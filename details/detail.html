@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="shortcut icon" type="image/png" href="../images/Meubel House_Logos-05.jpg">
+    <link rel="stylesheet" href="../css/mybootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../main/furniro.css">
+    <link rel="stylesheet" href="detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+</head>
+<body style="overflow-x: hidden; width: 100%;" class="no-transition">
+<div class="page">
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="ms-4 navbar-brand fw-bold fs-4"  href="../index.html">
+        <img src="../images/Meubel House_Logos-05.svg"  alt=""  class="d-inline-block align-text-top"> Furniro
+      </a>
+          <button class="navbar-toggler text-black" style="border:4px black solid;border-radius: 10px; box-shadow: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span  class="navbar-toggler-icon text-black" style="padding: 2px;"><svg width="20" height="26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link ms-5" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-5 active" href="../shop/shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-5" href="../blog/blog.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-5" href="../contact/contact.html">Contact</a>
+          </li>
+    </ul>
+        <ul class="navbar-nav ms-5 me-5">
+            <li><a class="nav-link mt-0 mb-0 vali" href="#sub"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12V7h2v6h-2m0 4h2v-2h-2m-10-2c2.67 0 8 1.34 8 4v3H2v-3c0-2.66 5.33-4 8-4m0-9a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1m0-9A2.1 2.1 0 0 0 7.9 8a2.1 2.1 0 0 0 2.1 2.1A2.1 2.1 0 0 0 12.1 8A2.1 2.1 0 0 0 10 5.9"/></svg></a></li>
+            <li><a class="nav-link mt-0 mb-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Search"><path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"/></svg></a></li>
+            <li><a class="nav-link mt-0 mb-0" id="heart" href="#"><svg class="likesvg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48"><path class="pathsvg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8"/></svg></a></li>
+            <li class="icon-cart"><a class="nav-link mt-0 mb-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 1024 1024"><path fill="currentColor" d="M922.9 701.9H327.4l29.9-60.9l496.8-.9c16.8 0 31.2-12 34.2-28.6l68.8-385.1c1.8-10.1-.9-20.5-7.5-28.4a34.99 34.99 0 0 0-26.6-12.5l-632-2.1l-5.4-25.4c-3.4-16.2-18-28-34.6-28H96.5a35.3 35.3 0 1 0 0 70.6h125.9L246 312.8l58.1 281.3l-74.8 122.1a34.96 34.96 0 0 0-3 36.8c6 11.9 18.1 19.4 31.5 19.4h62.8a102.43 102.43 0 0 0-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7h161.1a102.43 102.43 0 0 0-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7H923c19.4 0 35.3-15.8 35.3-35.3a35.42 35.42 0 0 0-35.4-35.2M305.7 253l575.8 1.9l-56.4 315.8l-452.3.8zm96.9 612.7c-17.4 0-31.6-14.2-31.6-31.6s14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 0 1-31.6 31.6m325.1 0c-17.4 0-31.6-14.2-31.6-31.6s14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 0 1-31.6 31.6"/></svg></a><span>0</span></li>
+            
+        </ul>
+      </div>
+    </div>
+  </nav>
+      <div class="edit p-3">
+                <a href="../index.html"><p class="d-inline ps-5 p-2 myhome">Home</p></a><svg class="nxt" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg>
+                <div class="going d-inline"><a href="../shop/shop.html" ><p class="d-inline p-2">Shop</p></a><svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg></div>
+                <div id="light" style="border-left: 2px solid var(--gray);" class="d-inline ps-4 p-2 ms-4"></div>
+    </div>
+    <div class="container mt-5">
+        <div class="ms-5 row">
+          <div class="col-md-1">
+            <div class="d-grid w-75 my-auto align-items-center">
+              <div class="one text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+              <div class="two text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+              <div class="three text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+              <div class="four text-center my-2"><img class="img-fluid ph" style="border-radius: 10px;" src="" alt=""></div>
+            </div>
+          </div>
+            <div class="col-md-4" >
+                <img id="product-image" class=" img-fluid" src="" alt="Product Image">
+            </div>
+            <div class="col-md-7 ps-5">
+                <h1 id="product-name"></h1>
+                <h3 id="product-price" class="gray"></h3>
+                <div class="stars w-25">
+                  <input type="radio" name="star" id="star5" value="5">
+                  <label for="star5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star4" value="4">
+                  <label for="star4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star3" value="3">
+                  <label for="star3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star2" value="2">
+                  <label for="star2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star1" value="1">
+                  <label for="star1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+              </div>
+              <span class="d-inline w-25 gray ps-2 ms-4 ms-md-2" style=" border-left: 2px solid var(--gray);"><span id="rating-value">0</span> Customers Review</span>
+              <p id="product-description">
+              </p>
+              <p style="margin-top: -15px;">
+                Setting the bar as one of the loudest speakers in its class, the <br> Kilburn is a compact, stout-hearted hero with a well-balanced <br> audio which boasts a clear midrange and extended highs for a <br /> sound.
+              </p>
+              <div class="mb-2">Size</div>
+                <p>
+                  <span class="size active">l</span>
+                  <span class="size">xl</span>
+                  <span class="size">xs</span>
+                </p>
+                <span >Color</span>
+                <div >
+                <svg class="me-2" style="color: mediumslateblue;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15"><path fill="currentColor" d="M7.5 0a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15"/></svg>
+                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15"><path fill="currentColor" d="M7.5 0a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15"/></svg>
+                <svg class="me-2" style="color: var(--primary);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15"><path fill="currentColor" d="M7.5 0a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15"/></svg>
+              </div>
+              <br>
+              <div class="w-100">
+                <div class="me-2 mb-2 d-inline-flex p-3   border border-dark px-0 justify-content-evenly rounded" style="width: 15%; border-color: var(--gray) !important;">
+                  <div class="dont plus me-3" style="cursor: pointer;" >+</div>
+                  <div class="q me-3">0</div>
+                  <div class="dont minus" style="cursor: pointer;" >-</div>  
+                </div>
+                <button class="me-2 text-black p-3  w-25 bg-white" style="border-radius: 10px; border: 1px solid;" id="add-to-cart">Add to Cart</button>
+                <a href="#" class="comp">
+                <button class="text-black p-3 w-25 bg-white" style="border-radius: 10px; border: 1px solid;">+ compare</button>
+                </a>
+                </div>
+                <div class="m-5 ms-0 mt-0">
+                <hr>
+                </div>
+                <div class="row ms-1 mb-3">
+                  <div style="width: 10%;" class="col-2 gray">
+                  <p class="mb-2" >SKU</p>
+                  <p class="mb-2" >Category</p>
+                  <p class="mb-2" >Share</p>
+                  <p class="mb-2" >Tags</p>
+                  </div>
+                  <div class="ms-2 col-1 ps-3 gray">
+                    <p class="mb-2">:</p>
+                    <p class="mb-2">:</p>
+                    <p class="mb-2">:</p>
+                    <p class="mb-2">:</p>
+                  </div>
+                  <div class="col-3 me-5">
+                    <p style="margin-left: -40px;"   class="gray mb-2 key"></p>
+                    <p style="margin-left: -40px;"   class="gray mb-2 key">Sofas</p>
+                    <p style="margin-left: -40px;"   class="gray mb-2 key">Sofa, Chair, Home, Shop</p>
+                    <p style="margin-left: -40px;" class="mb-2">
+                      <svg style="cursor: pointer;" class="share-icon twitter me-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m215.3 337.7c.3 4.7.3 9.6.3 14.4c0 146.8-111.8 315.9-316.1 315.9c-63 0-121.4-18.3-170.6-49.8c9 1 17.6 1.4 26.8 1.4c52 0 99.8-17.6 137.9-47.4c-48.8-1-89.8-33-103.8-77c17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35c25.1-4.7 49.1-14.1 70.5-26.7c-8.3 25.7-25.7 47.4-48.8 61.1c22.4-2.4 44-8.6 64-17.3c-15.1 22.2-34 41.9-55.7 57.6"/></svg>
+                      <svg style="cursor: pointer;" class="share-icon whatsapp me-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-LinkedinBoxFill"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634 3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0 2.063 2.063 0 0 1 4.125 0z"/></svg>
+                      <svg style="cursor: pointer;" class="share-icon facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-FacebookFill"><g clip-path="url(#clip0_65_70)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067z"/></g><defs><clipPath id="clip0_65_70"><rect width="24" height="24"/></clipPath></defs></svg>      
+                    </p>
+                  </div>
+                </div>
+                <!-- <svg class="share-icon linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-WhatsappFill"><g clip-path="url(#clip0_615_275)"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.415 14.382c-.298-.149-1.759-.867-2.031-.967-.272-.099-.47-.148-.669.15-.198.296-.767.966-.94 1.164-.174.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.241-.579-.486-.5-.668-.51-.174-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.57-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.422 7.403h-.004a9.87 9.87 0 0 1-5.032-1.378l-.36-.214-3.742.982.999-3.648-.235-.374a9.861 9.861 0 0 1-1.511-5.26c.002-5.45 4.436-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.892 6.993c-.002 5.45-4.436 9.885-9.884 9.885zm8.412-18.297A11.815 11.815 0 0 0 11.992 0C5.438 0 .102 5.335.1 11.892c-.001 2.096.546 4.142 1.587 5.945L0 24l6.304-1.654a11.881 11.881 0 0 0 5.684 1.448h.005c6.554 0 11.89-5.335 11.892-11.893a11.821 11.821 0 0 0-3.48-8.413"/></g><defs><clipPath id="clip0_615_275"><rect width="24" height="24"/></clipPath></defs></svg> -->
+            </div>
+        </div>
+    </div>
+    <hr>
+    <section>
+      <div class="navbar navbar-expand-md">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+          <li class="nav-item m-3 fs-5">
+            Description
+          </li>
+          <li class="nav-item m-3 gray fs-5">
+            Additional information
+          </li>
+          <li class="nav-item gray m-3 fs-5">
+            Reviews [<span class="v2"></span>]
+          </li>
+    </ul>
+      </div>
+        </div>
+      <section class="gray p-5 m-5 mb-3 mt-0">
+        <div class="px-5 mx-5">
+          <p class="mx-4">Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</p>
+          <p class="mx-4">Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</p>  
+        </div>
+         <div class="mx-5 mt-5 row" >
+          <div class="col-md-6">
+          <img class="img-fluid" src="../images/g.png" alt="">
+          </div>
+          <div class="col-md-6">
+          <img class="img-fluid" src="../images/Group 107.png" alt="">
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="similar p-5 pt-0 mx-auto">
+    <h2 class="text-center fw-bold my-5">Related products</h2>
+    <div class="products-show">
+      <div class="row">
+      </div>
+    </div>
+  </div>
+  <div class="text-center"><a href="../shop/shop.html#car"><button class="show-more mb-5 mt-3 text-center">Show More</button></a></div>
+  <hr>
+    <div class="footer p-5">
+      <div class="row">
+        <div class="col-lg-4 col-8">
+          <h3 class="fw-bold pb-5">Furniro.</h3>
+          <p class="text-black-50">
+            300 university drive suit 200 carol <br> gabels, <br>
+            fl33134 usa
+          </p>
+        </div>
+        <div class="col-lg-2 col-4">
+        <h6 class="text-black-50 p-3">Links</h6>
+        <ul class="list-unstyled lh-lg">
+          <li ><a class="nav-link p-3" href="../index.html">Home</a></li>
+          <li ><a class="nav-link p-3" href="../shop/shop.html">Shop</a></li>
+          <li ><a class="nav-link p-3" href="../blog/blog.html">About</a></li>
+          <li ><a class="nav-link p-3" href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </div>
+        
+        <div class="col-lg-2 col-4">
+          <h6 class="text-black-50 p-3">Help</h6>
+          <ul class="list-unstyled lh-lg">
+            <li ><a class="nav-link p-3" href="checkout.html">Payment Options</a></li>
+            <li ><a class="nav-link p-3" href="">Returns</a></li>
+            <li ><a class="nav-link p-3" href="">Privacy Policies</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-8">
+          <h6 class="text-black-50 p-3">Newsletter</h6>
+          <ul id="sub" class="list-unstyled lh-lg">
+            <li ><input type="email" class="myemail m-2" placeholder="Enter your email address"><button class="subscribe m-2">Subscribe</button></li>
+            <li ><a class="nav-link p-3" href="">Privacy Policies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr style="width: 95%; margin: 20px auto;">
+    <p class="m-2 p-3" ><span id="copyright"></span> furniro. all rights reverved</p>
+      <div id="popup" class="popup">
+        Product Added!
+      </div>
+      <button id="scrollToTopBtn" title="Go to top">↑</button>
+    <div class="total d-none"></div>
+    </div>
+    <section id="listcardparent" class="dont">
+      <div class="d-flex justify-content-between align-items-center p-2 pb-0">
+      <h4 class="d-inline dont">Shopping Cart</h4>
+      <img src="../images/cart.png" class="closing" style="cursor: pointer;" alt="">
+      </div>
+      <hr>
+      <section id="listcard" class="dont mb-3"></section>
+      <span class="subtotal">Subtotal:</span>
+      <hr style="width: 110%;" class="me-5">
+      <div class="dont btncart d-flex">
+      <button class="dont carting">
+        <a style="border: none;" href="../cart/cart.html">
+        cart
+        </a>
+      </button>
+      <a href="../cart/cart.html">
+        <button class="dont checkout">checkout</button>
+        </a>
+        <a href="#">
+          <button class="dont">comperation</button>
+        </a>
+      </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="detail.js"></script>
+    <script src="../main/main.js"></script>
+    <script src="../main/cart.js"></script>
+</body>
+</html>

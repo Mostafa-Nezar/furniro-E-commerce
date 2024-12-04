@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro Blog</title>
+    <link rel="stylesheet" href="../css/mybootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../main/furniro.css">
+    <link rel="shortcut icon" type="image/png" href="../images/Meubel House_Logos-05.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    .search-container {
+    position: relative;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Leaves space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.read-more{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid;
+}
+.m{
+    padding: 25px;
+    background-color: var(--wired);
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 30px;
+    border: none;
+    outline: none;
+}
+.m.x{
+    height: 3px;
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+}
+.m.active{
+    background-color: var(--primary);
+    color: white !important;
+}
+.m:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+  .gray,.myul a:hover{
+    color: #9F9F9F;
+  }
+  </style>
+</head>
+<body class="" style="overflow-x: hidden; width: 100%;">
+  <div class="page">
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <a class="ms-4 navbar-brand fw-bold fs-4"  href="../index.html">
+            <img src="../images/Meubel House_Logos-05.svg"  alt=""  class="d-inline-block align-text-top"> Furniro
+          </a>
+              <button class="navbar-toggler text-black"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-black" ></span>
+              </button>
+              <button class="navbar-toggler text-black" style="border:4px black solid;border-radius: 10px; box-shadow: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span  class="navbar-toggler-icon text-black" style="padding: 2px;"><svg width="20" height="26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link ms-5" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-5" href="../shop/shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-5 active" href="blog.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-5" href="../contact/contact.html">Contact</a>
+              </li>
+        </ul>
+            <ul class="navbar-nav ms-5 me-5">
+                <li><a class="nav-link mt-0 mb-0 vali" href="#sub"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12V7h2v6h-2m0 4h2v-2h-2m-10-2c2.67 0 8 1.34 8 4v3H2v-3c0-2.66 5.33-4 8-4m0-9a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1m0-9A2.1 2.1 0 0 0 7.9 8a2.1 2.1 0 0 0 2.1 2.1A2.1 2.1 0 0 0 12.1 8A2.1 2.1 0 0 0 10 5.9"/></svg></a></li>
+                <li><a class="nav-link mt-0 mb-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Search"><path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"/></svg></a></li>
+                <li><a class="nav-link mt-0 mb-0" id="heart" href="#"><svg class="likesvg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48"><path class="pathsvg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8"/></svg></a></li>
+                <li class="icon-cart"><a class="nav-link mt-0 mb-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 1024 1024"><path fill="currentColor" d="M922.9 701.9H327.4l29.9-60.9l496.8-.9c16.8 0 31.2-12 34.2-28.6l68.8-385.1c1.8-10.1-.9-20.5-7.5-28.4a34.99 34.99 0 0 0-26.6-12.5l-632-2.1l-5.4-25.4c-3.4-16.2-18-28-34.6-28H96.5a35.3 35.3 0 1 0 0 70.6h125.9L246 312.8l58.1 281.3l-74.8 122.1a34.96 34.96 0 0 0-3 36.8c6 11.9 18.1 19.4 31.5 19.4h62.8a102.43 102.43 0 0 0-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7h161.1a102.43 102.43 0 0 0-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7H923c19.4 0 35.3-15.8 35.3-35.3a35.42 35.42 0 0 0-35.4-35.2M305.7 253l575.8 1.9l-56.4 315.8l-452.3.8zm96.9 612.7c-17.4 0-31.6-14.2-31.6-31.6s14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 0 1-31.6 31.6m325.1 0c-17.4 0-31.6-14.2-31.6-31.6s14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 0 1-31.6 31.6"/></svg></a><span>0</span></li>
+                
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="contacting">
+        <div class="container p-5">
+            <div class="text-center">
+                <img src="../images/Meubel House_Logos-05.jpg" alt="">
+                <h2 class="w-100 mt-2">Blog</h2>
+                <a href="../index.html" class="myhome">
+                <h5 class="d-inline">Home</h5>
+                </a>
+                <svg class="nxt" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg><p class="d-inline p-1">
+                  <p class="going d-inline">
+                    Blog
+                  </p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+      <div class="container p-3 px-5">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="me-5 my-5">
+              <img class="p-2 img-fluid" src="../images/laptop-blog.png" alt="">
+              <div class="m-2 gray mb-4 w-50 d-flex">
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10 9.25c-2.27 0-2.73-3.44-2.73-3.44C7 4.02 7.82 2 9.97 2c2.16 0 2.98 2.02 2.71 3.81c0 0-.41 3.44-2.68 3.44m0 2.57L12.72 10c2.39 0 4.52 2.33 4.52 4.53v2.49s-3.65 1.13-7.24 1.13c-3.65 0-7.24-1.13-7.24-1.13v-2.49c0-2.25 1.94-4.48 4.47-4.48z"/></svg><span class="ms-2">Admin</span></div>
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 19c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-8H2zM19 4h-2V3c0-.6-.4-1-1-1s-1 .4-1 1v1H9V3c0-.6-.4-1-1-1s-1 .4-1 1v1H5C3.3 4 2 5.3 2 7v2h20V7c0-1.7-1.3-3-3-3"/></svg><span class="ms-2">24 Oct 2022</span></div>
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m4.748 7.645l-.331 3.644c-.05.54-.074.811-.03 1.07a2 2 0 0 0 .238.655c.131.228.325.422.711.808l5.176 5.176c.787.787 1.18 1.18 1.636 1.328c.402.131.835.131 1.237 0c.456-.148.853-.544 1.645-1.336l3.96-3.96c.792-.792 1.187-1.188 1.336-1.644a2 2 0 0 0-.001-1.236c-.148-.457-.543-.853-1.335-1.645l-5.163-5.163c-.39-.39-.584-.584-.813-.716a2 2 0 0 0-.656-.238c-.26-.045-.535-.02-1.084.03l-3.63.33c-.944.086-1.417.129-1.787.335a2 2 0 0 0-.775.775c-.205.368-.248.838-.333 1.773z"/><path d="M9.713 9.713a1 1 0 1 0-1.415-1.414a1 1 0 0 0 1.415 1.414"/></g></svg><span class="ms-2"></span>Wood</div>
+              </div>
+              <h2 class="mb-4">Going all-in With Millennial design</h2>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.</p>
+              <button class="read-more">Read More</button>
+            </div>
+            <div class="me-5 my-5">
+              <img class="p-2 img-fluid" src="../images/Rectangle 68.png" alt="">
+              <div class="m-2 gray mb-4 w-50 d-flex">
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10 9.25c-2.27 0-2.73-3.44-2.73-3.44C7 4.02 7.82 2 9.97 2c2.16 0 2.98 2.02 2.71 3.81c0 0-.41 3.44-2.68 3.44m0 2.57L12.72 10c2.39 0 4.52 2.33 4.52 4.53v2.49s-3.65 1.13-7.24 1.13c-3.65 0-7.24-1.13-7.24-1.13v-2.49c0-2.25 1.94-4.48 4.47-4.48z"/></svg><span class="ms-2">Admin</span></div>
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 19c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-8H2zM19 4h-2V3c0-.6-.4-1-1-1s-1 .4-1 1v1H9V3c0-.6-.4-1-1-1s-1 .4-1 1v1H5C3.3 4 2 5.3 2 7v2h20V7c0-1.7-1.3-3-3-3"/></svg><span class="ms-2">24 Oct 2022</span></div>
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m4.748 7.645l-.331 3.644c-.05.54-.074.811-.03 1.07a2 2 0 0 0 .238.655c.131.228.325.422.711.808l5.176 5.176c.787.787 1.18 1.18 1.636 1.328c.402.131.835.131 1.237 0c.456-.148.853-.544 1.645-1.336l3.96-3.96c.792-.792 1.187-1.188 1.336-1.644a2 2 0 0 0-.001-1.236c-.148-.457-.543-.853-1.335-1.645l-5.163-5.163c-.39-.39-.584-.584-.813-.716a2 2 0 0 0-.656-.238c-.26-.045-.535-.02-1.084.03l-3.63.33c-.944.086-1.417.129-1.787.335a2 2 0 0 0-.775.775c-.205.368-.248.838-.333 1.773z"/><path d="M9.713 9.713a1 1 0 1 0-1.415-1.414a1 1 0 0 0 1.415 1.414"/></g></svg><span class="ms-2"></span>Wood</div>
+              </div>
+              <h2 class="mb-4">Exploring new ways of decorating</h2>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.</p>
+              <button class="read-more">Read More</button>
+            </div>
+            <div class="me-5 my-5">
+              <img class="p-2 img-fluid" src="../images/Rectangle 68(1).png" alt="">
+              <div class="m-2 gray mb-4 w-50 d-flex">
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10 9.25c-2.27 0-2.73-3.44-2.73-3.44C7 4.02 7.82 2 9.97 2c2.16 0 2.98 2.02 2.71 3.81c0 0-.41 3.44-2.68 3.44m0 2.57L12.72 10c2.39 0 4.52 2.33 4.52 4.53v2.49s-3.65 1.13-7.24 1.13c-3.65 0-7.24-1.13-7.24-1.13v-2.49c0-2.25 1.94-4.48 4.47-4.48z"/></svg><span class="ms-2">Admin</span></div>
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 19c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-8H2zM19 4h-2V3c0-.6-.4-1-1-1s-1 .4-1 1v1H9V3c0-.6-.4-1-1-1s-1 .4-1 1v1H5C3.3 4 2 5.3 2 7v2h20V7c0-1.7-1.3-3-3-3"/></svg><span class="ms-2">24 Oct 2022</span></div>
+                <div class="me-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m4.748 7.645l-.331 3.644c-.05.54-.074.811-.03 1.07a2 2 0 0 0 .238.655c.131.228.325.422.711.808l5.176 5.176c.787.787 1.18 1.18 1.636 1.328c.402.131.835.131 1.237 0c.456-.148.853-.544 1.645-1.336l3.96-3.96c.792-.792 1.187-1.188 1.336-1.644a2 2 0 0 0-.001-1.236c-.148-.457-.543-.853-1.335-1.645l-5.163-5.163c-.39-.39-.584-.584-.813-.716a2 2 0 0 0-.656-.238c-.26-.045-.535-.02-1.084.03l-3.63.33c-.944.086-1.417.129-1.787.335a2 2 0 0 0-.775.775c-.205.368-.248.838-.333 1.773z"/><path d="M9.713 9.713a1 1 0 1 0-1.415-1.414a1 1 0 0 0 1.415 1.414"/></g></svg><span class="ms-2"></span>Wood</div>
+              </div>
+              <h2 class="mb-4">Handmade pieces that took time to make</h2>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.</p>
+              <button class="read-more">Read More</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-2 m-3 my-5">
+              <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <ul class="d-none myul"></ul>
+            </div>
+            <div class="p-2 m-3 my-5">
+              <h3 class="m-2 mb-4">Categories</h3>
+              <div class="gray d-flex justify-content-between w-75 m-2 my-5"><span>Craft</span><span>2</span></div>
+              <div class="gray d-flex justify-content-between w-75 m-2 mb-5"><span>Design</span><span>8</span></div>
+              <div class="gray d-flex justify-content-between w-75 m-2 mb-5"><span>Handmade</span><span>7</span></div>
+              <div class="gray d-flex justify-content-between w-75 m-2 mb-5"><span>Craft</span><span>2</span></div>
+              <div class="gray d-flex justify-content-between w-75 m-2 mb-5"><span>Craft</span><span>2</span></div>
+              </div>
+            <div class="p-2 m-3 my-5">
+              <h2>Recent Posts</h2>
+              <div class="my-5 d-flex align-items-center justify-content-evenly ">
+                <div class="">
+                  <img src="../images/Rectangle 69.png" class="img-fluid" alt="">
+                </div>
+                <div class="w-50 my-2">
+                    Going all-in With  Millennial design
+                    <br>
+                    <span >03 Aug 2022</span>
+                </div>
+              </div>
+              <div class="my-5 d-flex align-items-center justify-content-evenly ">
+                <div class="">
+                  <img src="../images/Rectangle 69(1).png" class="img-fluid" alt="">
+                </div>
+                <div class="w-50 my-2">
+                    Going all-in With  Millennial design
+                    <br>
+                    <span >03 Aug 2022</span>
+                </div>
+              </div>
+              <div class="my-5 d-flex align-items-center justify-content-evenly ">
+                <div class="">
+                  <img src="../images/Rectangle 69(2).png" class="img-fluid" alt="">
+                </div>
+                <div class="w-50 my-2">
+                    Going all-in With  Millennial design
+                    <br>
+                    <span >03 Aug 2022</span>
+                </div>
+              </div>
+              <div class="my-5 d-flex align-items-center justify-content-evenly">
+                <div >
+                  <img src="../images/Rectangle 69(3).png" class="img-fluid" alt="">
+                </div>
+                <div  class="w-50 my-2">
+                    Going all-in With  Millennial design
+                    <br>
+                    <span >03 Aug 2022</span>
+                </div>
+              </div>
+              <div class="my-5 d-flex align-items-center justify-content-evenly ">
+                <div >
+                  <img src="../images/Rectangle 69(4).png" class="img-fluid" alt="">
+                </div>
+                <div  class="w-50 my-2">
+                    Going all-in With  Millennial design
+                    <br>
+                    <span >03 Aug 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="co-12 m-5 mt-0">
+            <ul class="carousel-indicators w">
+              <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active m" aria-current="true" aria-label="Slide 1">1</li>
+              <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="m" aria-label="Slide 2">2</li>
+              <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="m" aria-label="Slide 3">3</li>
+              <li class="carousel-control-next m x" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span>Next</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="features mt-5 p-5">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <div class="feature d-flex mb-md-0 mb-5">
+              <img src="../images/trophy 1.svg" class="p-2" alt="">
+            <div class="p-2">
+            <h6 class="fw-bold">High Quality</h6>
+              <div class= "text-black-50">crafted from top matrials</div>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="feature d-flex mb-md-0 mb-5">
+              <img src="../images/true.svg" class="p-2" alt="">
+            <div class="p-2">
+            <h6 class="fw-bold">Warranty Protection</h6>
+              <div class= "text-black-50">over 2 years</div>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="feature d-flex">
+              <img src="../images/handcarrybox.svg" class="p-2" alt="">
+            <div class="p-2">
+            <h6 class="fw-bold">Free Shipping</h6> 
+              <div class= "text-black-50">order over 150 $</div>
+            </div>
+            </div>
+          </div>
+             <div class="col-md-3 col-6">
+            <div class="feature d-flex">
+              <img src="../images/girl.svg" class="p-2" alt="">
+            <div class="p-2">
+            <h6 class="fw-bold">24 / 7 Support</h6>
+              <div class= "text-black-50">Dedicated Support</div>
+            </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <div class="footer p-5">
+        <div class="row">
+          <div class="col-lg-4 col-8">
+            <h3 class="fw-bold pb-5">Furniro.</h3>
+            <p class="text-black-50">
+              300 university drive suit 200 carol <br> gabels, <br>
+              fl33134 usa
+            </p>
+          </div>
+          <div class="col-lg-2 col-4">
+          <h6 class="text-black-50 p-3">Links</h6>
+          <ul class="list-unstyled lh-lg">
+            <li ><a class="nav-link p-3" href="furniro.html">Home</a></li>
+            <li ><a class="nav-link p-3" href="shop.html">Shop</a></li>
+            <li ><a class="nav-link p-3" href="">About</a></li>
+            <li ><a class="nav-link p-3" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+          
+          <div class="col-lg-2 col-4">
+            <h6 class="text-black-50 p-3">Help</h6>
+            <ul class="list-unstyled lh-lg">
+              <li ><a class="nav-link p-3" href="checkout.html">Payment Options</a></li>
+              <li ><a class="nav-link p-3" href="">Returns</a></li>
+              <li ><a class="nav-link p-3" href="">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-8">
+            <h6 class="text-black-50 p-3">Newsletter</h6>
+            <ul id="sub" class="list-unstyled lh-lg">
+              <li ><input type="email" class="myemail m-2" placeholder="Enter your email address"><button class="subscribe m-2">Subscribe</button></li>
+              <li ><a class="nav-link p-3" href="">Privacy Policies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr style="width: 95%; margin: 20px auto;">
+    <p class="m-2 p-3" ><span id="copyright"></span> furniro. all rights reverved</p>
+      </div>
+    </div>
+    <section id="listcardparent" class="dont">
+        <div class="d-flex justify-content-between align-items-center p-2 pb-0">
+        <h4 class="d-inline dont">Shopping Cart</h4>
+        <img src="images/cart.png" class="closing" style="cursor: pointer;" alt="">
+        </div>
+        <hr>
+        <section id="listcard" class="dont mb-3"></section>
+        <span class="subtotal">Subtotal:</span>
+        <hr style="width: 110%;" class="me-5">
+        <div class="dont btncart d-flex">
+        <button class="dont carting">
+          <a style="border: none;" href="../cart/cart.html">
+          cart
+          </a>
+        </button>
+        <a href="../checkout/checkout.html">
+          <button class="dont checkout">checkout</button>
+          </a>
+          <a href="../compare/compare.html?id=40">
+            <button class="dont">comperation</button>
+          </a>
+        </div>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top">↑
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M208.49 120.49a12 12 0 0 1-17 0L140 69v147a12 12 0 0 1-24 0V69l-51.51 51.49a12 12 0 0 1-17-17l72-72a12 12 0 0 1 17 0l72 72a12 12 0 0 1 0 17"/></svg>
+        </button>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script type="module" src="../main/cart.js"></script>
+        <script src="../main/main.js"></script>
+        <script>
+          let arr = [
+            { id: 1, name: "furniro", page: "../index.html" },
+            { id: 2, name: "shop", page: "../shop/shop.html" },
+            { id: 3, name: "blog", page: "#" },
+            { id: 4, name: "detail", page: "../details/detail.html?id=23" },
+            { id: 5, name: "checkout", page: "../checkout/checkout.html" },
+            { id: 6, name: "cart", page: "../cart/cart.html" },
+            { id: 7, name: "compare", page: "../compare/compare.html" }
+          ];
+          function displayList(items) {
+            const ul = document.querySelector(".myul");
+            ul.innerHTML = '';
+            items.forEach((e) => {
+              let a = document.createElement("a");
+              a.classList.add("d-block", "my-5" ,"ms-5");
+              a.href = e.page;
+              a.innerHTML = e.name
+              ul.appendChild(a);
+            });
+          }
+          displayList(arr);
+            document.querySelector(".search-container").onclick = () => {
+            document.querySelector(".myul").classList.remove("d-none");
+          };
+          document.addEventListener("click", (e) => {
+             if (!e.target.closest(".search-container")) {
+                document.querySelector(".myul").classList.add("d-none");
+              }
+           });
+
+          document.querySelector("input").addEventListener("input", (ee) => {
+            const filteredArr = arr.filter(e => e.name.toLowerCase().includes(ee.target.value.toLowerCase()));
+            displayList(filteredArr);
+            addKeyboardNavigation();
+          });
+          function addKeyboardNavigation() {
+            const items = document.querySelectorAll(".myul a");
+            let currentIndex = 0;
+            function updateCurrentItem() {
+              items.forEach((item, index) => {
+                item.classList.toggle("gray", index === currentIndex);
+              });
+            }
+            document.addEventListener("keydown", function(event) {
+              if (!document.querySelector(".myul").classList.contains("d-none")) {
+                if (event.key === "ArrowDown") {
+                  currentIndex = (currentIndex + 1) % items.length;
+                } else if (event.key === "ArrowUp") {
+                  currentIndex = (currentIndex - 1 + items.length) % items.length;
+                } else if (event.key === "Enter") {
+                  items[currentIndex].click();
+                }
+                updateCurrentItem();
+                document.querySelector("input").placeholder = items[currentIndex].innerHTML;
+              }
+            });
+          
+            updateCurrentItem();
+          }
+          addKeyboardNavigation();
+          </script>
+</body>
+</html>

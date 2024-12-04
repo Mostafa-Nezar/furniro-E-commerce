@@ -1,0 +1,149 @@
+:root{
+    --color:#F6D8C6;
+    --primary:#B88E2F;
+    --black:#3A3A3A;
+    --color3:#FFF3E3;
+    --greencolor:#2EC1AC;
+    --redcolor:#E97171;
+    --semi-white:#F4F5F7;
+    --gray:#898989a8;
+    --wired:#F9F1E7;
+    --x:#FCF9F4;
+    }
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover{
+  transition: 1s;
+}
+.contacting{
+      background-image: url(../images/Rectangle\ 1x.png);
+      background-size:100% 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-clip:var(--redcolor);
+      filter:drop-shadow();
+      height: 229.4px;
+  }
+.features{
+  background-color: var(--color3);
+}
+nav{
+  background-color: white;
+}
+.nav-link{
+  color: black;
+}
+.nav-link:hover:not(#heart){
+  color: var(--color);
+}
+
+ul li input{
+  width: 250px;
+  border: none;
+  outline: none;
+  border-bottom: black 3px solid;
+}
+ul li .subscribe{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: black 3px solid;
+}
+.icon-cart{
+  position: relative;
+}
+.icon-cart span{
+  background-color: var(--redcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width:20px;
+  height: 20px;
+  border-radius: 25px;
+  position: absolute;
+  left: 25px;
+  top: 0%;
+  padding: 12px;
+  font-size: 12px;   
+}
+.myitem{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:0 1em auto;
+  margin-bottom: 2em;
+}
+.item img{
+  width:70px;
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+.disp{
+  transform: translateX(0) !important;
+  transition: 1s;
+}
+
+.red {
+  color: var(--redcolor) !important;
+}
+
+.bar{
+  padding:1em 2em;
+}
+
+.price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 1s;
+}
+
+#scrollToTopBtn:hover {
+  background-color:var(--primary);
+}
+.go{
+  position: absolute;
+  transform: translate(100px);
+  transition: 3s;
+}
+.go2{
+  position: absolute;
+  transform: translate(150px);
+  transition: 3s;
+}
+.hello{
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right,red,green blue,yellow);
+}

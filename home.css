@@ -1,0 +1,197 @@
+.banner{
+    background-image: url("images/scandinavian-interior-mockup-wall-decal-background\ 1.png");
+    background-size:cover;
+    height: 780px;
+    background-repeat: no-repeat;
+}
+
+@media(max-width:768px){
+    .navbar ul{
+    margin-left: 2em !important;
+    }
+}
+nav .active{
+    color: var(--color) !important;
+}
+.mask{
+    background-color:var(--color3);
+    height: 55%;
+    width: 40%;
+    position: relative;
+    left: 45%;
+    top: 48%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    border-radius: 10px;
+}
+@media(max-width:1050px){
+    .mask{
+        width: 80%;
+        left: 40%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.mask *:not(br){
+    margin: 20px;
+}
+.mask span{
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    margin: 20px;
+}
+.mask h1{
+    color: var(--primary);
+    font-weight: bold;
+}
+.mask button{
+    background-color: var(--primary);
+    padding: 20px;
+    border: none;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+}
+.mask span{
+    font-weight: bold;
+}
+.landing .row div img:hover{
+    transform: rotateY(30deg);   
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+/* ----------------------------------------------------- */
+
+
+
+
+.inspiration{
+    background-color: var(--x);
+}
+.inspiration-carousel-control-next{
+    position: absolute;
+    color: var(--primary);
+    background-color: white;
+    border-radius: 50%;
+    top: 40%;
+    left: 86%;
+    box-shadow: 2px 2px 30px 5px gray;
+    position: absolute;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+   
+}
+.indicator .dot{
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    opacity: 0.5;
+
+
+}
+.carousel-indicators .active{
+  border: 1px solid var(--primary);
+  opacity: 1;
+   color: var(--primary) ;
+}
+.w{
+    position: relative;
+    left: -30%;
+    bottom: 0px;
+    padding: 30px;
+}
+
+.inspiration .row{
+    padding-inline: 100px !important;
+    padding-bottom: 0 !important ;
+}
+
+/* hash */
+@media(max-width:440px){
+    .cont{
+        margin: 1em -1.8em !important;
+    }
+    .mask{
+        position:initial !important;
+        transform: translate(0px,0px) !important;
+        width: 100%;
+    }
+}
+@media(min-width:500px){
+    .hash{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-areas:"four two three" "four two three";
+    width: 100%;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.hash .two{
+    grid-area: two;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.hash .four{
+    grid-area: four;
+    display: grid;
+    gap: 10px;
+    grid-template-columns:repeat(8,1fr) ;
+    grid-template-rows: 49% 0.1% 49%;
+    grid-template-areas: "m1 m1 m1 m3 m3 m3 m3 m3" "x x x x x x x x " "m4 m4 m4 m5 m5 m5 m5 m5" ;   
+}
+.hash .three{
+    display: grid;
+    gap: 10px;
+    grid-template-columns:repeat(8,1fr) ;
+    grid-template-rows: 49% 0.1% 49%;
+    grid-template-areas: "m8 m8 m8 m8 m6 m6 m6 m6" "x x x x x x x x " "m10 m10 m10 m10 m9 m9 m9  ." ;   
+    grid-area:three ;
+}
+}
+
+@media(max-width:600px){
+
+    
+.mask *:not(br){
+    margin:initial !important;
+}
+.mask span{
+    word-spacing: initial !important;
+    letter-spacing: initial !important;
+    margin: initial !important;
+}
+.mask h1{
+    color: var(--primary);
+    font-weight: bold;
+}
+.mask button{
+    padding: 20px;
+    border: none;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+}
+.mask span{
+    font-weight: bold;
+}
+}
+
+.carimg{
+    height: 500px;
+}
+
+@media(max-width:600px){
+    .carimg{
+        height: 200px;
+    }
+}

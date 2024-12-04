@@ -1,0 +1,183 @@
+.shop{
+    background-image: url(images/Rectangle\ 1x.png);
+    background-size:100% 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-clip:var(--redcolor);
+}
+.w *.active{
+    background-color: var(--primary) ;
+    color: white !important;
+}
+.new{
+    background-color: var(--greencolor )!important;
+}
+.des{
+    padding: 20px;
+    color: black;
+}
+.m{
+    padding: 25px;
+    background-color: var(--wired);
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 30px;
+    border: none;
+    outline: none;
+}
+.m.x{
+    height: 3px;
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    padding-right: 60px;
+    padding-right: 40px;
+}
+.m.active{
+    background-color: var(--primary);
+    color: white !important;
+}
+.m:hover{
+    background-color: var(--primary);
+    color: white;
+}
+.cont:hover .lay{
+    transform: translateY(-99%) translateX(0) !important;
+} 
+.w{
+    bottom: 0%;
+    margin: 0px;
+}
+
+.myul {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    background-color: var(--semi-white);
+    transition: 1s;
+}
+
+.myul li {
+    padding: 10px;
+    border-bottom: 1px solid var(--primary);
+    color: var(--black);
+    text-align: center; 
+    transition: 1s;
+}
+
+.myul li:hover {
+    background-color: var(--gray); 
+    color: white; 
+}
+
+.appear{
+    display: block !important;
+}
+
+.mylist{
+    cursor: pointer;
+}
+.myul li.active{
+    background-color: var(--gray) !important;
+}
+
+
+.myullet {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    background-color: var(--semi-white);
+    transition: 1s;
+    width: 200px;
+    transition: 1s;
+
+}
+
+.myullet li {
+    padding: 10px;
+    border-bottom: 1px solid var(--primary);
+    color: var(--black);
+    text-align: center; 
+    transition: 1s;
+}
+
+.myullet li:hover {
+    background-color: var(--gray); 
+    color: white; 
+}
+
+
+
+.myullet li.active{
+    background-color: var(--gray) !important;
+}
+
+.mydivlist{
+    position: absolute;
+    top: -390%;
+    z-index: 1000;
+    right: 30%;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    
+}
+.myullet{
+    position: absolute;
+    top: -70%;
+    z-index: 1000;
+    right: 10%;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+}
+.filter,.sort{
+    cursor: pointer;
+    padding: 10px;
+    transition: 1s;
+    width: 200px;
+}
+
+
+.filter:hover,.sort:hover{
+    background-color: var(--gray);
+}
+
+
+.myfilter{
+    cursor: pointer;
+}
+
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Leaves space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+.rot{
+    transform:rotate(90deg);
+}

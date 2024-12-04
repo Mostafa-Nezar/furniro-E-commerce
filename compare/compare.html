@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Producs</title>
+    <link rel="shortcut icon" type="image/png" href="../images/Meubel House_Logos-05.jpg">
+    <link rel="stylesheet" href="../css/mybootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../main/furniro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>      
+#item-list {
+    list-style-type: none;
+    padding: 1em;
+    margin: auto 2em;
+    margin-top: 1.8em; 
+    height: 300px;
+    overflow: scroll;
+    background-color: var(--semi-white);
+    transition: 1s;
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+.addbutton{
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+.psedo::after {
+    content: "";
+    position: absolute;
+    left: 30%; 
+    top: 110px; 
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid var(--primary);
+    width: 0;
+    height: 0;
+}
+
+#item-list li {
+    padding: 10px;
+    border-bottom: 1px solid var(--primary);
+    color: var(--black);
+    text-align: center; 
+    transition: 1s;
+}
+
+
+#item-list li:hover {
+    background-color: var(--gray); 
+    color: white; 
+}
+#product-image,#product-imagee{
+  border-radius: 8px;
+}
+.stars2 {
+    display:inline-flex;
+    justify-content: center;
+    padding: 10px;
+    pointer-events: none;
+}
+.stars2 input {
+    display: none;
+    pointer-events: none;
+}
+.stars2 label {
+    font-size: 1rem;
+    color: lightgray;
+    pointer-events: none;
+
+}
+.stars2 input:checked ~ label,
+.stars2 input:hover ~ label {
+    color: #FFC700;
+}
+.stars {
+  display:inline-flex;
+    justify-content: center;
+    padding: 10px;
+    pointer-events: none;
+}
+.stars input {
+    display: none;
+    pointer-events: none;
+}
+.stars label {
+  font-size: 1rem;
+    color: lightgray;
+    pointer-events: none;
+
+}
+.stars input:checked ~ label,
+.stars input:hover ~ label {
+    color: #FFC700;
+}  
+.read-more{
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--mygray);
+}
+.read-more:hover{
+  color: var(--primary);
+  border-bottom: 3px solid black;
+}
+    </style>
+</head>
+<body style="overflow-x: hidden; width: 100%; height: 110%;" class="no-transition">
+  <div class="page">
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <a class="ms-4 navbar-brand fw-bold fs-4"  href="../index.html">
+          <img src="../images/Meubel House_Logos-05.png"  alt=""  class="d-inline-block align-text-top"> Furniro
+        </a>
+  
+            <button class="navbar-toggler text-black" style="border:4px black solid;border-radius: 10px; box-shadow: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span  class="navbar-toggler-icon text-black" style="padding: 2px;"><svg width="20" height="26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-lg-5" href="../shop/shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-lg-5" href="../blog/blog.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-lg-5" href="../contact/contact.html">Contact</a>
+            </li>
+      </ul>
+          <ul class="navbar-nav me-5">
+              <li><a class="nav-link vali" href="#sub"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12V7h2v6h-2m0 4h2v-2h-2m-10-2c2.67 0 8 1.34 8 4v3H2v-3c0-2.66 5.33-4 8-4m0-9a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1m0-9A2.1 2.1 0 0 0 7.9 8a2.1 2.1 0 0 0 2.1 2.1A2.1 2.1 0 0 0 12.1 8A2.1 2.1 0 0 0 10 5.9"/></svg></a></li>
+              <li><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Search"><path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"/></svg></a></li>
+              <!-- <li><a class="nav-link" id="heart" href="#"><svg id="heartsvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Heart"><path d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z"/></svg></a></li> -->
+              <li><a class="nav-link" id="heart" href="#"><svg class="likesvg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48"><path class="pathsvg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8"/></svg></a></li>
+              <li class="icon-cart"><a class="icon-cart nav-link" href="#"><svg class="icon-cart" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 1024 1024"><path class="icon-cart" fill="currentColor" d="M922.9 701.9H327.4l29.9-60.9l496.8-.9c16.8 0 31.2-12 34.2-28.6l68.8-385.1c1.8-10.1-.9-20.5-7.5-28.4a34.99 34.99 0 0 0-26.6-12.5l-632-2.1l-5.4-25.4c-3.4-16.2-18-28-34.6-28H96.5a35.3 35.3 0 1 0 0 70.6h125.9L246 312.8l58.1 281.3l-74.8 122.1a34.96 34.96 0 0 0-3 36.8c6 11.9 18.1 19.4 31.5 19.4h62.8a102.43 102.43 0 0 0-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7h161.1a102.43 102.43 0 0 0-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7H923c19.4 0 35.3-15.8 35.3-35.3a35.42 35.42 0 0 0-35.4-35.2M305.7 253l575.8 1.9l-56.4 315.8l-452.3.8zm96.9 612.7c-17.4 0-31.6-14.2-31.6-31.6s14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 0 1-31.6 31.6m325.1 0c-17.4 0-31.6-14.2-31.6-31.6s14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 0 1-31.6 31.6"/></svg></a><span>0</span></li>
+              
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <div class="contacting">
+          <div class="container p-5">
+              <div class="text-center">
+                  <img src="../images/Meubel House_Logos-05.jpg" alt="">
+                  <h1>Products Copmartion</h1>
+                  <a href="../index.html" class="myhome">
+                  <h5 class="d-inline">Home</h5>
+                  </a>
+                  <svg class="nxt" style="color: black;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20"><path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z"/></svg><p class="d-inline p-1">
+                    <p class="going d-inline">
+                      Products Copmartion
+                    </p>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="container mt-5">
+          <div class="row">
+  
+          <div class="col-md-3" >
+            <h3 class="ms-5 mt-2 ps-5 p-1">go to product page for more products</h3>
+            <a class="ms-5" href="/shop/shop.html#car"><button class="mx-5 read-more gray p-1 fs-5 px-0">View More</button></a>
+          </div>      
+          <div class="col-md-3" >
+            <a class="dagain" href="">
+              <img id="product-image" class="mb-4 img-fluid" src="" style="width: 285px; height: 177px;" alt="Product Image">
+            </a>
+            <div class="pt-2">
+              <h4 id="product-name" class="name m-0"></h4>
+              <p class="price m-0"></p>
+            </div>
+            <div class="myrate d-inline"></div>
+            <div class="stars w-25  d-inline">
+              <input type="radio" name="star" id="star5" value="5">
+              <label for="star5"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+              <input type="radio" name="star" id="star4" value="4">
+              <label for="star4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+              <input type="radio" name="star" id="star3" value="3">
+              <label for="star3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+              <input type="radio" name="star" id="star2" value="2">
+              <label for="star2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+              <input type="radio" name="star" id="star1" value="1">
+              <label for="star1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+          </div>
+          <span class="d-inline w-25 ps-2 ms-4 ms-md-2" style="color: var(--gray); border-left: 2px solid var(--gray);"><span class="views">0</span> Review</span>
+          <div class="d-none" id="rating-value">0</div>
+          </div>
+          <div class="col-md-3" >
+            <a class="dagain2" href="">
+                  <img id="product-imagee" class="mb-4 img-fluid" style="width: 285px; height: 177px;" src="../images/outdoorsofa.png" alt="Product Image">
+                </a>
+                  <div class="pt-2">
+                    <h4 id="product-name2" class="name2 m-0">Product</h4>
+                    <p class="price2 m-0">Rs 0,000.000</p>
+                  </div>
+                <div class="myrate2 d-inline">0</div>
+                <div class="stars2 w-25 d-inline">
+                  <input type="radio" name="star" id="star10" value="10">
+                  <label for="star10"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star9" value="9">
+                  <label for="star9"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star8" value="8">
+                  <label for="star8"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star7" value="7">
+                  <label for="star7"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+                  <input type="radio" name="star" id="star6" value="6">
+                  <label for="star6"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m10 1l3 6l6 .75l-4.12 4.62L16 19l-6-3l-6 3l1.13-6.63L1 7.75L7 7z"/></svg></label>
+              </div>
+              <div class="w-50 d-inline">
+              </div><span class="d-inline w-25 ps-2 ms-4 ms-md-2" style="color: var(--gray); border-left: 2px solid var(--gray);"><span class="views2">No </span> Review  </span>
+                <div class="d-none" id="rating-value2">0</div>
+          </div>
+          <div class="col-md-3" >
+                <h5 class="mt-4">Add A product</h5>
+                <div id="proudctsname" class="p-2 ps-3 text-white mb-2" style="width: 85%; border-radius: 8px; cursor: pointer; background-color: var(--primary);">Choose a Product <svg xmlns="http://www.w3.org/2000/svg" class="ms-5" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="m2 8.35l10.173 9.823L21.997 8"/></svg>
+                </div>
+                <div class="psedo d-none"></div>
+                <ul id="item-list" style="cursor: pointer;" class="d-none"></ul>
+          </div>
+  
+            </div>
+          </div>
+  <div class="mytable w-75 mx-auto mt-5 pb-5 mb-5">
+    <div class="container" style="border-top: 1px solid var(--mygray);">
+      <div class="row">
+        <div class="col-md-3" style="border-right: 1px solid var(--mygray);">
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2">General</h3>
+         <div class="myobj p-2">Sales package</div>
+         <div class="myobj p-2">Model Number</div>
+         <div class="myobj p-2">Secoundary Matrial</div>
+         <div class="myobj p-2">Configuration</div>
+         <div class="myobj p-2">Upholstery Matrial</div>
+         <div class="myobj p-2">Upholstery Color</div>
+        <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2">Product</h3>
+         <div class="myobj p-2">Filling Matrial</div>
+         <div class="myobj p-2">Finish Type</div>
+         <div class="myobj p-2">Adjust Headerest</div>
+         <div class="myobj p-2">Maximum Load Capcity</div>
+         <div class="myobj p-2">Origin of Manufacture</div>
+         <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2">Dimentions</h3>
+         <div class="myobj p-2">Width</div>
+         <div class="myobj p-2">Height</div>
+         <div class="myobj p-2">Depth</div>
+         <div class="myobj p-2">Weight</div>
+         <div class="myobj p-2">Seat Height</div>
+         <div class="myobj p-2">Leg Height</div>
+         <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2">Warranty</h3>
+         <div class="myobj p-2">Warranty Summry</div>
+         <div class="myobj p-2" style="height: 140px;">Warranty Service Type</div>
+         <div class="myobj p-2" style="height: 140px;">Covered in Warranty</div>
+         <div class="myobj p-2" style="height: 140px;">Not Covered in <br> Warranty</div>
+         <div class="myobj p-2">Domestic Warranty</div>
+
+        </div>
+        <div class="col-md-3" style="border-right: 1px solid var(--mygray);">
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2"></div>
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj2 p-2"></div>
+          <div class="myobj2 p-2" style="height: 140px;"></div>
+          <div class="myobj2 p-2" style="height: 140px;"></div>
+          <div class="myobj2 p-2" style="height: 140px;"></div>
+          <div class="myobj2 p-2"></div>
+          <button class="addcopm1 p-5 py-3 fs-7  m-2 addbutton">Add To Cart</button>
+        </div>
+        <div class="col-md-3" style="border-right: 1px solid var(--mygray);">
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2"></div>
+          <h3 style="width: 100px; height: 100px;" class="fs-4 p-5 ps-2"></h3>
+          <div class="myobj3 p-2"></div>
+          <div class="myobj3 p-2" style="height: 140px;"></div>
+          <div class="myobj3 p-2" style="height: 140px;"></div>
+          <div class="myobj3 p-2" style="height: 140px;"></div>
+          <div class="myobj3 p-2"></div>
+          <button class="addcopm2 p-5 py-3 fs-7  m-2 addbutton" data-id="39">Add To Cart</button>
+  
+  
+         
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="features p-5 mt-5">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="feature d-flex mb-md-0 mb-5">
+          <img src="../images/trophy 1.svg" class="p-2" alt="">
+        <div class="p-2">
+        <h6 class="fw-bold">High Quality</h6>
+          <div class="fs-7 text-black-50">crafted from top matrials</div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="feature d-flex mb-md-0 mb-5">
+          <img src="../images/true.svg" class="p-2" alt="">
+        <div class="p-2">
+        <h6 class="fw-bold">Warranty Protection</h6>
+          <div class="fs-7 text-black-50">over 2 years</div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6  mb-md-0 mb-5">
+        <div class="feature d-flex">
+          <img src="../images/handcarrybox.svg" class="p-2" alt="">
+        <div class="p-2">
+        <h6 class="fw-bold">Free Shipping</h6> 
+          <div class="fs-7 text-black-50">order over 150 $</div>
+        </div>
+        </div>
+      </div>
+         <div class="col-md-3 col-sm-6">
+        <div class="feature d-flex">
+          <img src="../images/girl.svg" class="p-2" alt="">
+        <div class="p-2">
+        <h6 class="fw-bold">24 / 7 Support</h6>
+          <div class="fs-7 text-black-50">Dedicated Support</div>
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>    
+      <div class="footer p-5">
+        <div class="row">
+          <div class="col-lg-4 col-8">
+            <h3 class="fw-bold pb-5">Furniro.</h3>
+            <p class="text-black-50">
+              300 university drive suit 200 carol <br> gabels, <br>
+              fl33134 usa
+            </p>
+          </div>
+          <div class="col-lg-2 col-4">
+          <h6 class="text-black-50 p-3">Links</h6>
+          <ul class="list-unstyled lh-lg">
+            <li ><a class="nav-link p-3" href="../index.html">Home</a></li>
+            <li ><a class="nav-link p-3" href="../shop/shop.html">Shop</a></li>
+            <li ><a class="nav-link p-3" href="../blog/blog.html">About</a></li>
+            <li ><a class="nav-link p-3" href="../contact/contact.html">Contact</a></li>
+          </ul>
+        </div>
+          
+          <div class="col-lg-2 col-4">
+            <h6 class="text-black-50 p-3">Help</h6>
+            <ul class="list-unstyled lh-lg">
+              <li ><a class="nav-link p-3" href="../checkout/checkout.html">Payment Options</a></li>
+              <li ><a class="nav-link p-3" href="">Returns</a></li>
+              <li ><a class="nav-link p-3" href="">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-8">
+            <h6 class="text-black-50 p-3">Newsletter</h6>
+            <ul id="sub" class="list-unstyled lh-lg">
+              <li ><input type="email" class="myemail m-2" placeholder="Enter your email address"><button class="subscribe m-2">Subscribe</button></li>
+              <li ><a class="nav-link p-3" href="">Privacy Policies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr style="width: 95%; margin: 20px auto;">
+      <p class="m-2 p-3" ><span id="copyright"></span> furniro. all rights reverved</p>
+      <button id="scrollToTopBtn" title="Go to top">↑</button>
+      <div id="popup" class="popup">
+        Product Added!
+      </div>
+      <div class="total d-none"></div>
+  </div>
+    <section id="listcardparent" class="dont" style="z-index: 2000;">
+      <div class="d-flex justify-content-between align-items-center p-2 pb-0">
+      <h4 class="d-inline dont">Shopping Cart</h4>
+      <img src="../images/cart.png" class="closing" style="cursor: pointer;" alt="">
+      </div>
+      <hr>
+      <section id="listcard" class="dont mb-3"></section>
+      <span class="subtotal">Subtotal:</span>
+      <hr style="width: 110%;" class="me-5">
+      <div class="dont btncart d-flex">
+      <button class="dont carting">
+        <a style="border: none;" href="../cart/cart.html">
+        cart
+        </a>
+      </button>
+      <a href="../checkout/checkout.html">
+        <button class="dont checkout">checkout</button>
+        </a>
+        <a href="#">
+          <button class="dont">comperation</button>
+        </a>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="compare.js"></script>
+    <script src="../main/cart.js"></script>
+    <script src="../main/main.js"></script>
+</body>
+</html>

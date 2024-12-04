@@ -1,0 +1,1071 @@
+
+x.js
+<span class="minus d-none" data-id=${info.id}>-</span>
+<span class="d-none plus" data-id=${info.id}>+</span>
+
+/* svg{
+    background-color: #B88E2F !important;
+} */
+
+shop
+// let req = new XMLHttpRequest()
+// req.open("GET","productlist.json")
+// req.send()
+// req.onload = function() {
+//        let products = JSON.parse(this.responseText);
+//        for (let index = 0; index < products.length; index++) {
+//         let jsproduct = document.getElementsByClassName("productjs")[index];
+//             createproduct(jsproduct,products[index])
+//     }
+// }
+
+furniro
+// let req = new XMLHttpRequest()
+// req.open("GET","productlist.json")
+// req.send()
+// req.onload = function() {
+//        let products = JSON.parse(this.responseText);
+//        products[0].length=8
+//             createproduct(document.getElementById("products-show"),products[0])
+// }
+
+
+
+// let cart = () => {
+//     let cartspan = document.querySelector(".icon-cart span")
+    
+//     cartspan.onclick=()=>{
+//         cartspan.innerHTML=0
+//     }
+    
+//     setTimeout(() => {
+//         document.querySelectorAll(".addbutton").forEach((e)=>{
+//             e.addEventListener("click",()=>{
+//             cartspan.style.display="flex"
+//                 cartspan.innerHTML++
+//             })
+//         })
+//     }, 1000);
+    
+    
+    
+//     }
+
+
+// //cart
+// let cart = () => {
+// let cartspan = document.querySelector(".icon-cart span")
+// cartspan.innerHTML=localStorage.getItem("num")
+// let val = cartspan.innerHTML
+
+// cartspan.onclick=()=>{
+//     cartspan.style.display="none"
+//     cartspan.innerHTML=0
+//     val=0
+//     localStorage.setItem("num",val)
+// }
+
+// setTimeout(() => {
+//     document.querySelectorAll(".addbutton").forEach((e)=>{
+//         e.addEventListener("click",()=>{
+//         cartspan.style.display="flex"
+//             cartspan.innerHTML++
+//              val = cartspan.innerHTML
+//             localStorage.setItem("num",val)
+//         })
+//     })
+// }, 1000);
+
+
+
+// }
+
+
+subscriber
+// let vali =document.querySelector(".vali")
+// let sub = document.querySelector(".subscribe")
+// let myemail = document.querySelector(".myemail")
+// let arr = [] 
+// arr=JSON.parse(localStorage.getItem("mails"))
+// let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// if (emailregex.test(myemail.value) && (myemail.value != "")) {
+//     sub.addEventListener("click",()=>{
+//         vali.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-PersonCheck"><circle cx="12" cy="7" r="5"/><path d="M17 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/><path d="M17 16.5l1.5 1.5 2.5-3"/></svg>`
+//         arr.push(myemail.value)
+//         console.log(arr);
+//         localStorage.setItem("mails",JSON.stringify(arr))
+//         myemail.value=""
+//     })
+// }
+// let uniqarr = [...new Set(arr)]
+
+// console.log(uniqarr);
+
+
+
+
+shop
+<!-- <script>
+  import { cart } from "./products.js";
+
+let myArray = [];
+
+async function fetchData() {
+  try {
+    let response = await fetch("productlist.json");
+    let data = await response.json();
+    localStorage.setItem("myarr", JSON.stringify(data[0]));
+
+    console.log(JSON.parse(localStorage.getItem("myarr")));
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+fetchData();
+
+ myArray = JSON.parse(localStorage.getItem("myarr")) || [];
+
+setTimeout(() => {
+  document.querySelectorAll(".addbutton").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      let itemId = event.target.dataset.id;
+      let item = myArray.find((value) => value.id == itemId);
+
+      if (item) {
+        let listcart = document.querySelector("#listcard");
+        let tot = document.querySelector(".icon-cart span");
+        let totalQuantity = 0;
+
+        // Clear the cart display
+        listcart.innerHTML = "";
+
+        // Increment the total quantity
+        totalQuantity++;
+
+        // Create and append the new item element to the cart
+        let newItem = document.createElement("div");
+        newItem.classList.add("cont");
+        newItem.innerHTML = `
+          <div class="image">
+            <img src="${item.image}" alt="">
+          </div>
+          <div class="name">${item.name}</div>
+          <div class="totalprice">$${item.price * item.quantity}</div>
+          <div class="quantity">
+            <span class="minus" data-id="${item.id}">-</span>
+            <span>${item.quantity}</span>
+            <span class="plus" data-id="${item.id}">+</span>
+          </div>
+        `;
+        listcart.appendChild(newItem);
+
+        // Update the total quantity in the cart icon
+        tot.innerText = totalQuantity;
+      }
+    });
+  });
+
+  cart();
+}, 1000);
+
+</script> -->
+
+
+
+cart.html
+    <script>
+        let products = JSON.parse(localStorage.getItem("cart"))
+        let username = document.querySelector(".one").value
+            let arr = []
+            let m = 0
+            for (let index = 0; index < products.length; index++) {
+            arr.push({
+                y:products[index].productid,
+                z:products[index].quantity,
+                w: products[index].price * products[index].quantity,
+            })
+            
+            m+=arr[index].w
+            console.log(arr[index]);
+            console.log(m);
+        }
+
+        document.querySelector(".total").innerHTML=`
+        <div>${m}</div>  
+        `
+          document.querySelector(".x").onclick= () => {
+          
+            let customs = []
+        console.log(username);
+        
+          customs.push({"username":username,"total":m})
+        console.log(customs)
+          } 
+        
+    </script>
+
+<script>
+  let m = JSON.parse(localStorage.getItem("finalreset"))
+        console.log(m);
+        document.querySelector(".subtotal").innerHTML+=` ${m}`
+</script>
+
+<script>
+  let m = JSON.parse(localStorage.getItem("finalreset"))
+  console.log(m);
+  document.querySelector(".subtotal").innerHTML+=` ${m}`
+</script>
+
+cart.html
+console.log(document.body.style.backgroundColor=document.querySelector(".subtotal").parentElement.parentElement.style.backgroundColor);
+
+
+
+<a href="/detail.html?id=${product.id}">
+<img src=${product.image}>
+</a>
+<h2>${product.name}</h2>
+<div class="price">${product.price}</div>
+<button class="addcart" data-id=${product.id}>Add To Cart</button>
+
+
+
+
+
+
+
+
+
+
+document.body.addEventListener("click", (event) => {
+  // Prevent the action if the click is on the #listcardparent or .page elements themselves
+  if (!event.target.closest('#listcardparent') && !event.target.closest('.page')) {
+    document.querySelector("#listcardparent").classList.remove("disp");
+    document.querySelector(".page").classList.remove("darken");
+  }
+});
+
+document.addEventListener("click", (event) => {
+  const listCardParent = document.querySelector("#listcardparent");
+  const page = document.querySelector(".page");
+
+  // Check if the clicked element is not inside the list card parent
+  if (!listCardParent.contains(event.target)) {
+    listCardParent.classList.remove("disp");
+    page.classList.remove("darken");
+  }
+});
+
+
+
+// document.addEventListener("click",(event)=>{
+//   console.log(event.target.parentElement.parentElement);
+//   if ((!event.target.classList.contains("icon-cart")) && (document.querySelector("#listcardparent").classList.contains("disp"))) {
+//     document.querySelector("#listcardparent").classList.remove("disp")
+//     document.querySelector(".page").classList.remove("darken")
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+carousel before edit
+import {createproduct,like,copyright,likeitem,subscriber } from "./products.js";
+
+let arr = [];
+
+fetch('productlist.json')
+    .then(response => response.json())
+    .then(products => {
+        for (let index = 0; index < products.length; index++) {
+            let jsproduct = document.getElementsByClassName("productjs")[index];
+            createproduct(jsproduct, products[index]);
+            localStorage.setItem("hello",JSON.stringify(products[0]))
+
+        }
+        localStorage.setItem("hello",JSON.stringify(products[0]))
+    })
+    .catch(error => {
+        console.error('Error fetching the product list:', error);
+    });
+
+let appear = () => {
+    document.querySelector(".mylist").onclick = () =>{
+        document.querySelector("ul.myul").classList.toggle("appear") 
+    }
+}
+let myfilter = () => {
+    document.querySelectorAll(".myul li").forEach((e)=>{
+        e.classList.remove("active")
+        e.addEventListener("click", function (event) {
+            document.querySelectorAll(".myul li").forEach((e)=>{
+                e.classList.remove("active")})
+        e.classList.add("active")
+            arr = JSON.parse(localStorage.getItem("hello"))
+            arr = arr.filter((e) => e.price > event.target.innerHTML )        
+            for (let index = 0; index < 3; index++) {
+                let jsproduct = document.getElementsByClassName("productjs")[index];
+                jsproduct.innerHTML=null
+                createproduct(jsproduct, arr);
+                console.log("hi");
+            }
+        }) 
+    })
+} 
+// Function to sort an array of objects alphabetically by the "name" field
+function sortByName(array) {
+    return array.slice().sort((a, b) => {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    });
+  }
+  
+  // Function to fetch data from productlist.json and sort it
+  async function fetchAndSortProducts() {
+    try {
+      // Fetch data from the JSON file
+      const response = await fetch('productlist.json');
+      const jsonData = await response.json();
+  
+      // Process and sort the JSON data
+      const sortedData = jsonData.map(array => sortByName(array));
+  
+      // Output the sorted data
+      console.log(sortedData);
+    } catch (error) {
+      console.error('Error fetching or processing JSON data:', error);
+    }
+  }
+  
+  // Fetch and sort the JSON data
+  fetchAndSortProducts();
+  
+
+myfilter()
+appear()
+like()
+copyright()
+subscriber()
+likeitem()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { createproduct, like, copyright, likeitem, subscriber } from "./products.js";
+
+let arr = [];
+
+fetch('productlist.json')
+    .then(response => response.json())
+    .then(products => {
+        let arr2 = products[0].slice(16, -16);
+        let arr3 = products[0].slice(32);
+        products[0].length = 16;
+
+        createproduct(document.getElementsByClassName("productjs")[0], products[0]);
+        createproduct(document.getElementsByClassName("productjs")[1], arr2);
+        createproduct(document.getElementsByClassName("productjs")[2], arr3);
+
+        localStorage.setItem("hello", JSON.stringify(products[0]));
+        localStorage.setItem("hello2", JSON.stringify(arr2));
+        localStorage.setItem("hello3", JSON.stringify(arr3));
+    })
+    .catch(error => {
+        console.error('Error fetching the product list:', error);
+    });
+
+let appear = () => {
+    document.querySelector(".mylist").addEventListener("click", () => {
+        document.querySelector(".mydivlist").classList.toggle("d-none");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("sort") || e.target.parentElement.classList.contains("sort")) {
+            document.querySelector(".myullet").classList.toggle("d-none");
+            document.querySelector(".sort svg").classList.toggle("rot");
+        }
+
+        if (e.target.classList.contains("filter") || e.target.parentElement.classList.contains("filter")) {
+            document.querySelector(".myul").classList.toggle("d-none");
+            document.querySelector(".filter svg").classList.toggle("rot");
+        }
+    });
+};
+
+document.querySelectorAll("*").forEach((e) => {
+    e.addEventListener("click", (ee) => {    
+        if (!ee.target.classList.contains("myfilter")) {
+            document.querySelector(".mydivlist").classList.add("d-none");
+        }
+    });
+});
+
+let filterAndSort = () => {
+    let filteredArr = JSON.parse(localStorage.getItem("hello"));
+    let filteredArr2 = JSON.parse(localStorage.getItem("hello2"));
+    let filteredArr3 = JSON.parse(localStorage.getItem("hello3"));
+
+    let filterValue = document.querySelector(".myul li.active")?.innerText;
+    let sortValue = document.querySelector(".myullet li.active")?.innerText.toLowerCase();
+
+    if (filterValue) {
+        filteredArr = filteredArr.filter((e) => e.price == filterValue);
+        filteredArr2 = filteredArr2.filter((e) => e.price == filterValue);
+        filteredArr3 = filteredArr3.filter((e) => e.price == filterValue);
+    }
+
+    if (sortValue) {
+        switch (sortValue) {
+            case "a-z":
+                filteredArr.sort((a, b) => a.name.localeCompare(b.name));
+                filteredArr2.sort((a, b) => a.name.localeCompare(b.name));
+                filteredArr3.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case "z-a":
+                filteredArr.sort((a, b) => b.name.localeCompare(a.name));
+                filteredArr2.sort((a, b) => b.name.localeCompare(a.name));
+                filteredArr3.sort((a, b) => b.name.localeCompare(a.name));
+                break;
+            case "default":
+                filteredArr = JSON.parse(localStorage.getItem("hello"));
+                filteredArr2 = JSON.parse(localStorage.getItem("hello2"));
+                filteredArr3 = JSON.parse(localStorage.getItem("hello3"));
+                break;
+        }
+    }
+
+    let jsproduct = document.getElementsByClassName("productjs")[0];
+    let jsproduct1 = document.getElementsByClassName("productjs")[1];
+    let jsproduct2 = document.getElementsByClassName("productjs")[2];
+    jsproduct.innerHTML = null;
+    jsproduct1.innerHTML = null;
+    jsproduct2.innerHTML = null;
+
+    createproduct(jsproduct, filteredArr);
+    createproduct(jsproduct1, filteredArr2);
+    createproduct(jsproduct2, filteredArr3);
+    likeitem();
+};
+
+let myfilter = () => {
+    document.querySelectorAll(".myul li").forEach((e) => {
+        e.classList.remove("active");
+        e.addEventListener("click", function () {
+            document.querySelectorAll(".myul li").forEach((e) => e.classList.remove("active"));
+            e.classList.add("active");
+            filterAndSort();
+        });
+    });
+};
+
+let myfilteralpahapetically = () => {
+    document.querySelectorAll(".myullet li").forEach((liElement) => {
+        liElement.classList.remove("active");
+        liElement.addEventListener("click", function () {
+            document.querySelectorAll(".myullet li").forEach((e) => e.classList.remove("active"));
+            liElement.classList.add("active");
+            filterAndSort();
+        });
+    });
+};
+
+myfilteralpahapetically();
+myfilter();
+appear();
+like();
+copyright();
+subscriber();
+likeitem();
+
+
+import {createproduct,like,copyright,likeitem,subscriber } from "./products.js";
+
+let arr = [];
+
+fetch('productlist.json')
+    .then(response => response.json())
+    .then(products => {
+        let arr2 = products[0].slice(16,-16)
+        console.log(arr2);
+        
+        let arr3 = products[0].slice(32)
+        console.log(arr3);
+        products[0].length = 16
+        console.log(products[0]);
+        createproduct(document.getElementsByClassName("productjs")[0], products[0]);
+        createproduct(document.getElementsByClassName("productjs")[1], arr2);
+        createproduct(document.getElementsByClassName("productjs")[2], arr3);
+    localStorage.setItem("hello",JSON.stringify(products[0]))
+    localStorage.setItem("hello2",JSON.stringify(arr2))
+    localStorage.setItem("hello3",JSON.stringify(arr3))
+    })
+    .catch(error => {
+        console.error('Error fetching the product list:', error);
+    });
+
+let appear = () => {
+    document.querySelector(".mylist").addEventListener("click",()=>{
+        document.querySelector(".mydivlist").classList.toggle("d-none")
+    })
+    document.addEventListener("click",(e)=>{
+        if (e.target.classList.contains("sort") || e.target.parentElement.classList.contains("sort")) {
+            document.querySelector(".myullet").classList.toggle("d-none")
+            document.querySelector(".sort svg").classList.toggle("rot")
+
+        }
+        if (e.target.classList.contains("filter") || e.target.parentElement.classList.contains("filter")) {
+            document.querySelector(".myul").classList.toggle("d-none")
+            document.querySelector(".filter svg").classList.toggle("rot")
+
+        }
+    })
+}
+
+
+document.querySelectorAll("*").forEach((e)=>{
+    e.addEventListener("click",(ee)=>{    
+    if ((!ee.target.classList.contains("myfilter"))) {
+        document.querySelector(".mydivlist").classList.add("d-none")
+      }
+    })
+  })
+
+
+
+
+
+
+let myfilter = () => {
+    document.querySelectorAll(".myul li").forEach((e)=>{
+        e.classList.remove("active")
+        e.addEventListener("click", function (event) {
+            document.querySelectorAll(".myul li").forEach((e)=>{
+                e.classList.remove("active")})
+        e.classList.add("active")
+            arr = JSON.parse(localStorage.getItem("hello"))
+            let arr2 = JSON.parse(localStorage.getItem("hello2"))
+            let arr3 = JSON.parse(localStorage.getItem("hello3"))
+            arr = arr.filter((e) => e.price == event.target.innerHTML )        
+            arr2 = arr2.filter((e) => e.price == event.target.innerHTML )        
+            arr3 = arr3.filter((e) => e.price == event.target.innerHTML )        
+            let jsproduct = document.getElementsByClassName("productjs")[0];
+            let jsproduct1 = document.getElementsByClassName("productjs")[1];
+            let jsproduct2 = document.getElementsByClassName("productjs")[2]
+                jsproduct.innerHTML=null
+                jsproduct1.innerHTML=null
+                jsproduct2.innerHTML=null
+                createproduct(jsproduct, arr);
+                createproduct(jsproduct1, arr2);
+                createproduct(jsproduct2, arr3);
+                likeitem()
+        }) 
+    })
+} 
+let myfilteralpahapetically = () => {
+    document.querySelectorAll(".myullet li").forEach((liElement) => {
+        liElement.classList.remove("active");
+        liElement.addEventListener("click", function (event) {
+            document.querySelectorAll(".myullet li").forEach((e) => {
+                e.classList.remove("active");
+            });
+            liElement.classList.add("active");
+
+            let arr = JSON.parse(localStorage.getItem("hello"));
+            let arr2 = JSON.parse(localStorage.getItem("hello2"));
+            let arr3 = JSON.parse(localStorage.getItem("hello3"));
+
+            switch (event.target.innerHTML.toLowerCase()) {
+                case "a-z":
+                    arr.sort((a, b) => a.name.localeCompare(b.name));
+                    arr2.sort((a, b) => a.name.localeCompare(b.name));
+                    arr3.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case "z-a":
+                    arr.sort((a, b) => b.name.localeCompare(a.name));
+                    arr2.sort((a, b) => b.name.localeCompare(a.name));
+                    arr3.sort((a, b) => b.name.localeCompare(a.name));
+                    break;
+                case "default":
+                    arr = JSON.parse(localStorage.getItem("hello"));
+                    arr2 = JSON.parse(localStorage.getItem("hello2"));
+                    arr3 = JSON.parse(localStorage.getItem("hello3"));
+                    break;
+            }
+
+            let jsproduct = document.getElementsByClassName("productjs")[0];
+            let jsproduct1 = document.getElementsByClassName("productjs")[1];
+            let jsproduct2 = document.getElementsByClassName("productjs")[2];
+            jsproduct.innerHTML = null;
+            jsproduct1.innerHTML = null;
+            jsproduct2.innerHTML = null;
+
+            createproduct(jsproduct, arr);
+            createproduct(jsproduct1, arr2);
+            createproduct(jsproduct2, arr3);
+            likeitem()
+        });
+    });
+}
+
+
+
+
+
+
+
+myfilteralpahapetically()
+myfilter()
+appear()
+like()
+copyright()
+subscriber()
+likeitem()
+
+
+
+
+
+
+
+
+
+
+import { createproduct, like, copyright, likeitem, subscriber } from "./products.js";
+
+let arr = [];
+
+fetch('productlist.json')
+    .then(response => response.json())
+    .then(products => {
+        let arr2 = products[0].slice(16, -16);
+        let arr3 = products[0].slice(32);
+        products[0].length = 16;
+
+        createproduct(document.getElementsByClassName("productjs")[0], products[0]);
+        createproduct(document.getElementsByClassName("productjs")[1], arr2);
+        createproduct(document.getElementsByClassName("productjs")[2], arr3);
+
+        localStorage.setItem("hello", JSON.stringify(products[0]));
+        localStorage.setItem("hello2", JSON.stringify(arr2));
+        localStorage.setItem("hello3", JSON.stringify(arr3));
+    })
+    .catch(error => {
+        console.error('Error fetching the product list:', error);
+    });
+
+let setHeight = (imageName, height1, height2) => {
+    const targetImage = document.querySelector(`img[src$='${imageName}']`);
+    if (targetImage) {
+        targetImage.style.height = height1;
+        console.log(targetImage);
+    }
+
+    const targetImage2 = document.querySelector(`.dont img[src$='${imageName}']`);
+    if (targetImage2) {
+        targetImage2.style.height = height2;
+        console.log(targetImage2);
+    }
+};
+
+let appear = () => {
+    document.querySelector(".mylist").addEventListener("click", () => {
+        document.querySelector(".mydivlist").classList.toggle("d-none");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("sort") || e.target.parentElement.classList.contains("sort")) {
+            document.querySelector(".myullet").classList.toggle("d-none");
+            document.querySelector(".sort svg").classList.toggle("rot");
+        }
+
+        if (e.target.classList.contains("filter") || e.target.parentElement.classList.contains("filter")) {
+            document.querySelector(".myul").classList.toggle("d-none");
+            document.querySelector(".filter svg").classList.toggle("rot");
+        }
+    });
+};
+
+document.querySelectorAll("*").forEach((e) => {
+    e.addEventListener("click", (ee) => {
+        if (!ee.target.classList.contains("myfilter")) {
+            document.querySelector(".mydivlist").classList.add("d-none");
+        }
+    });
+});
+
+let resetProducts = () => {
+    let arr = JSON.parse(localStorage.getItem("hello"));
+    let arr2 = JSON.parse(localStorage.getItem("hello2"));
+    let arr3 = JSON.parse(localStorage.getItem("hello3"));
+
+    let jsproduct = document.getElementsByClassName("productjs")[0];
+    let jsproduct1 = document.getElementsByClassName("productjs")[1];
+    let jsproduct2 = document.getElementsByClassName("productjs")[2];
+    jsproduct.innerHTML = null;
+    jsproduct1.innerHTML = null;
+    jsproduct2.innerHTML = null;
+
+    createproduct(jsproduct, arr);
+    createproduct(jsproduct1, arr2);
+    createproduct(jsproduct2, arr3);
+    likeitem();
+
+    document.querySelectorAll(".myul li").forEach((li) => li.classList.remove("active"));
+    document.querySelectorAll(".myullet li").forEach((li) => li.classList.remove("active"));
+
+    // Apply height adjustment again after resetting products
+    setHeight("asgaardsofa.png", "316px", "63.5833px");
+    setHeight("brown.png", "316px", "63.5833px");
+};
+
+let myfilter = () => {
+    document.querySelectorAll(".myul li").forEach((e) => {
+        e.classList.remove("active");
+        e.addEventListener("click", function () {
+            document.querySelectorAll(".myul li").forEach((e) => e.classList.remove("active"));
+            e.classList.add("active");
+            filterAndSort();
+        });
+    });
+};
+
+let myfilteralpahapetically = () => {
+    document.querySelectorAll(".myullet li").forEach((liElement) => {
+        liElement.classList.remove("active");
+        liElement.addEventListener("click", function () {
+            document.querySelectorAll(".myullet li").forEach((e) => e.classList.remove("active"));
+            liElement.classList.add("active");
+            filterAndSort();
+        });
+    });
+};
+
+let filterAndSort = () => {
+    let filteredArr = JSON.parse(localStorage.getItem("hello"));
+    let filteredArr2 = JSON.parse(localStorage.getItem("hello2"));
+    let filteredArr3 = JSON.parse(localStorage.getItem("hello3"));
+
+    let filterValue = document.querySelector(".myul li.active")?.innerText;
+    let sortValue = document.querySelector(".myullet li.active")?.innerText.toLowerCase();
+
+    if (filterValue && filterValue !== 'refresh') {
+        filteredArr = filteredArr.filter((e) => e.price == filterValue);
+        filteredArr2 = filteredArr2.filter((e) => e.price == filterValue);
+        filteredArr3 = filteredArr3.filter((e) => e.price == filterValue);
+    }
+
+    if (sortValue) {
+        switch (sortValue) {
+            case "a-z":
+                filteredArr.sort((a, b) => a.name.localeCompare(b.name));
+                filteredArr2.sort((a, b) => a.name.localeCompare(b.name));
+                filteredArr3.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case "z-a":
+                filteredArr.sort((a, b) => b.name.localeCompare(a.name));
+                filteredArr2.sort((a, b) => b.name.localeCompare(a.name));
+                filteredArr3.sort((a, b) => b.name.localeCompare(a.name));
+                break;
+            case "default":
+                filteredArr = JSON.parse(localStorage.getItem("hello"));
+                filteredArr2 = JSON.parse(localStorage.getItem("hello2"));
+                filteredArr3 = JSON.parse(localStorage.getItem("hello3"));
+                break;
+        }
+    }
+
+    let jsproduct = document.getElementsByClassName("productjs")[0];
+    let jsproduct1 = document.getElementsByClassName("productjs")[1];
+    let jsproduct2 = document.getElementsByClassName("productjs")[2];
+    jsproduct.innerHTML = null;
+    jsproduct1.innerHTML = null;
+    jsproduct2.innerHTML = null;
+
+    createproduct(jsproduct, filteredArr);
+    createproduct(jsproduct1, filteredArr2);
+    createproduct(jsproduct2, filteredArr3);
+    likeitem();
+
+    // Apply height adjustment again after filtering and sorting
+    setHeight("asgaardsofa.png", "316px", "63.5833px");
+    setHeight("brown.png", "316px", "63.5833px");
+};
+
+
+setTimeout(() => {
+    document.addEventListener("click",()=>{
+        document.querySelector(".show span").innerHTML=document.querySelectorAll(".cont").length
+        document.querySelector(".myshow").innerHTML=document.querySelectorAll(".cont").length
+    })
+}, 0);
+
+document.querySelector(".myownfilter").addEventListener("click", () => {
+    resetProducts();
+});
+
+myfilteralpahapetically();
+myfilter();
+appear();
+like();
+copyright();
+subscriber();
+likeitem();
+
+// Apply initial height adjustment
+setHeight("asgaardsofa.png", "316px", "63.5833px");
+setHeight("brown.png", "316px", "63.5833px");
+
+// Scroll to top button functionality
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+scrollToTopBtn.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
+
+
+
+
+
+
+
+
+
+
+import { createproduct, like, copyright, likeitem, subscriber } from "./products.js";
+
+let arr = [];
+
+fetch('productlist.json')
+    .then(response => response.json())
+    .then(products => {
+        let arr2 = products[0].slice(16, -16);
+        let arr3 = products[0].slice(32);
+        products[0].length = 16;
+
+        createproduct(document.getElementsByClassName("productjs")[0], products[0]);
+        createproduct(document.getElementsByClassName("productjs")[1], arr2);
+        createproduct(document.getElementsByClassName("productjs")[2], arr3);
+
+        localStorage.setItem("hello", JSON.stringify(products[0]));
+        localStorage.setItem("hello2", JSON.stringify(arr2));
+        localStorage.setItem("hello3", JSON.stringify(arr3));
+    })
+    .catch(error => {
+        console.error('Error fetching the product list:', error);
+    });
+
+let setHeight = (imageName, height1, height2) => {
+    const targetImage = document.querySelector(`img[src$='${imageName}']`);
+    if (targetImage) {
+        targetImage.style.height = height1;
+        console.log(targetImage);
+    }
+
+    const targetImage2 = document.querySelector(`.dont img[src$='${imageName}']`);
+    if (targetImage2) {
+        targetImage2.style.height = height2;
+        console.log(targetImage2);
+    }
+};
+
+let appear = () => {
+    document.querySelector(".mylist").addEventListener("click", () => {
+        document.querySelector(".mydivlist").classList.toggle("d-none");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("sort") || e.target.parentElement.classList.contains("sort")) {
+            document.querySelector(".myullet").classList.toggle("d-none");
+            document.querySelector(".sort svg").classList.toggle("rot");
+        }
+
+        if (e.target.classList.contains("filter") || e.target.parentElement.classList.contains("filter")) {
+            document.querySelector(".myul").classList.toggle("d-none");
+            document.querySelector(".filter svg").classList.toggle("rot");
+        }
+    });
+};
+
+document.querySelectorAll("*").forEach((e) => {
+    e.addEventListener("click", (ee) => {
+        if (!ee.target.classList.contains("myfilter")) {
+            document.querySelector(".mydivlist").classList.add("d-none");
+        }
+    });
+});
+
+let resetProducts = () => {
+    let arr = JSON.parse(localStorage.getItem("hello"));
+    let arr2 = JSON.parse(localStorage.getItem("hello2"));
+    let arr3 = JSON.parse(localStorage.getItem("hello3"));
+
+    let jsproduct = document.getElementsByClassName("productjs")[0];
+    let jsproduct1 = document.getElementsByClassName("productjs")[1];
+    let jsproduct2 = document.getElementsByClassName("productjs")[2];
+    jsproduct.innerHTML = null;
+    jsproduct1.innerHTML = null;
+    jsproduct2.innerHTML = null;
+
+    createproduct(jsproduct, arr);
+    createproduct(jsproduct1, arr2);
+    createproduct(jsproduct2, arr3);
+    likeitem();
+
+    document.querySelectorAll(".myul li").forEach((li) => li.classList.remove("active"));
+    document.querySelectorAll(".myullet li").forEach((li) => li.classList.remove("active"));
+
+    // Apply height adjustment again after resetting products
+    setHeight("asgaardsofa.png", "316px", "63.5833px");
+    setHeight("brown.png", "316px", "63.5833px");
+};
+
+let myfilter = () => {
+    document.querySelectorAll(".myul li").forEach((e) => {
+        e.classList.remove("active");
+        e.addEventListener("click", function () {
+            document.querySelectorAll(".myul li").forEach((e) => e.classList.remove("active"));
+            e.classList.add("active");
+            filterAndSort();
+        });
+    });
+};
+
+let myfilteralpahapetically = () => {
+    document.querySelectorAll(".myullet li").forEach((liElement) => {
+        liElement.classList.remove("active");
+        liElement.addEventListener("click", function () {
+            document.querySelectorAll(".myullet li").forEach((e) => e.classList.remove("active"));
+            liElement.classList.add("active");
+            filterAndSort();
+        });
+    });
+};
+
+let filterAndSort = () => {
+    let filteredArr = JSON.parse(localStorage.getItem("hello"));
+    let filteredArr2 = JSON.parse(localStorage.getItem("hello2"));
+    let filteredArr3 = JSON.parse(localStorage.getItem("hello3"));
+
+    let filterValue = document.querySelector(".myul li.active")?.innerText;
+    let sortValue = document.querySelector(".myullet li.active")?.innerText.toLowerCase();
+
+    if (filterValue && filterValue !== 'refresh') {
+        filteredArr = filteredArr.filter((e) => e.price == filterValue);
+        filteredArr2 = filteredArr2.filter((e) => e.price == filterValue);
+        filteredArr3 = filteredArr3.filter((e) => e.price == filterValue);
+    }
+
+    if (sortValue) {
+        switch (sortValue) {
+            case "a-z":
+                filteredArr.sort((a, b) => a.name.localeCompare(b.name));
+                filteredArr2.sort((a, b) => a.name.localeCompare(b.name));
+                filteredArr3.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case "z-a":
+                filteredArr.sort((a, b) => b.name.localeCompare(a.name));
+                filteredArr2.sort((a, b) => b.name.localeCompare(a.name));
+                filteredArr3.sort((a, b) => b.name.localeCompare(a.name));
+                break;
+            case "default":
+                filteredArr = JSON.parse(localStorage.getItem("hello"));
+                filteredArr2 = JSON.parse(localStorage.getItem("hello2"));
+                filteredArr3 = JSON.parse(localStorage.getItem("hello3"));
+                break;
+        }
+    }
+
+    let jsproduct = document.getElementsByClassName("productjs")[0];
+    let jsproduct1 = document.getElementsByClassName("productjs")[1];
+    let jsproduct2 = document.getElementsByClassName("productjs")[2];
+    jsproduct.innerHTML = null;
+    jsproduct1.innerHTML = null;
+    jsproduct2.innerHTML = null;
+
+    createproduct(jsproduct, filteredArr);
+    createproduct(jsproduct1, filteredArr2);
+    createproduct(jsproduct2, filteredArr3);
+    likeitem();
+
+    // Apply height adjustment again after filtering and sorting
+    setHeight("asgaardsofa.png", "316px", "63.5833px");
+    setHeight("brown.png", "316px", "63.5833px");
+};
+
+
+setTimeout(() => {
+    document.addEventListener("click",()=>{
+        document.querySelector(".show span").innerHTML=document.querySelectorAll(".cont").length
+        document.querySelector(".myshow").innerHTML=document.querySelectorAll(".cont").length
+    })
+}, 0);
+
+document.querySelector(".myownfilter").addEventListener("click", () => {
+    resetProducts();
+});
+
+myfilteralpahapetically();
+myfilter();
+appear();
+like();
+copyright();
+subscriber();
+likeitem();
+
+// Apply initial height adjustment
+setHeight("asgaardsofa.png", "316px", "63.5833px");
+setHeight("brown.png", "316px", "63.5833px");
+
+// Scroll to top button functionality
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+scrollToTopBtn.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
+
+
+                    // if (!rateviewIncremented) {
+                    //     rateviews++;
+                    //     localStorage.setItem(`rateviews${product.id}`, rateviews);
+                    //     product.rateviews = rateviews;
+                    //     rateviewIncremented = true;
+                    // }

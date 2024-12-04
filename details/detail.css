@@ -1,0 +1,44 @@
+#product-image{
+    border-radius: 16px;
+    width: 600px;
+    height: 400px;
+}
+
+.stars {
+    display:inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-left: -16px;
+}
+.stars input {
+    display: none;
+}
+.stars label {
+    font-size: 2rem;
+    color: lightgray;
+    padding: 0 5px;
+}
+.stars input:checked ~ label,
+.stars input:hover ~ label {
+    color: #FFC700;
+}
+.size{
+    background-color: var(--color3);
+    padding: 0.5em;
+    width: 10px;
+    margin: 0 0.2em;
+    text-transform: uppercase;    
+    height: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.size.active{
+    color: white;
+    background-color: var(--primary);
+}
+#product-image{
+    width: 410px;
+    height: 460px;
+}
